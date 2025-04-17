@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Services</title>
+    <!-- External Stylesheet for cleaner code -->
+
+    <link rel="stylesheet" href="ServicesStyle.css">
+    <title>Construction Services</title>
+
+</head>
+
+<body>
+     <!-- Top Bar -->
+     <div class="top-bar">
+        <span>&#128222; Call: <a href="tel:+01123455678990">+355 69 277 8586</a></span>
+        <span>&#9993; Email: <a href="mailto: constructguard@gmail.com">constructguard@gmail.com</a></span>
+        <span>&#x1F4CD; Tirane</span>
+    </div>
+
+    <!-- Main Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="Main.html">
+                <img src="Logo.png" alt="ConstructGuard Logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="Main.html">Home</a>
+            <a href="Services.html">Services</a>
+            <a href="AboutUs.html">About</a>
+            <a href="Main.html#testimonial">Testimonial</a>
+            <a href="ContactUs.html">Contact Us</a>
+        </div>
+    </div>
+    <div class="hero">
+        <h1>Shërbime Ekspertësh në Ndërtim</h1>
+        <p>"Mos e lër sigurinë për nesër, vepro sot!"</p>
+        
+    </div>
+    
+
+    <div class="services-about-container">
+        <!-- Services Section -->
+        <div class="services-container">
+            <div class="services">
+                <h2>Services</h2>
+                <p>Ne ofrojmë një zgjidhje të avancuar për sigurinë në ndërtim, duke përdorur inteligjencën artificiale për të monitoruar dhe siguruar pajtueshmërinë e punëtorëve me pajisjet mbrojtëse (PPE).</p>
+            </div>
+            <div class="service-items">
+                <!-- Service Item 1 -->
+                <div class="service-item">
+                    <img src="consphoto1.jpg" alt="Crane">
+                    <h3>Automated PPE Detection</h3>
+                    <p class="intro">Ne ofrojmë një zgjidhje të avancuar për sigurinë në kantier duke përdorur inteligjencën artificiale (AI) për të monitoruar pajisjet mbrojtëse të punëtorëve në kohë reale.</p>
+                    <p class="details hidden">
+                        Sistemi ynë përdor inteligjencën artificiale për të analizuar dhe identifikuar në kohë reale nëse punëtorët kanë veshur pajisjet mbrojtëse të detyrueshme, si helmetat, jelekët reflektues dhe maskat. Me ndihmën e kamerave inteligjente, skanimi kryhet automatikisht duke analizuar imazhet dhe duke zbuluar mungesën e pajisjeve mbrojtëse.
+                    </p>
+                    <a onclick="toggleInfo(this)">Lexo më shumë</a>
+                </div>
+                <!-- Service Item 2 -->
+                <div class="service-item">
+                    <img src="constphoto2.jpg" alt="Building">
+                    <h3>Njoftime të Menjëhershme</h3>
+                    <p class="intro">
+                        Sistemi ynë i monitorimit në kohë reale dërgon automatikisht sinjalizime për menaxherët e kantierit sapo të zbulohet një shkelje e rregullave të pajisjeve mbrojtëse (PPE).</p>
+                    <p class="details hidden">
+                        Në momentin që një punëtor nuk ka veshur helmetën, jelekun reflektues ose pajisje të tjera të detyrueshme, teknologjia e inteligjencës artificiale e identifikon këtë mangësi dhe aktivizon një njoftim të menjëhershëm. Ky njoftim mund të dërgohet përmes SMS, email-it  duke u siguruar që përgjegjësit të marrin masa në kohë për të parandaluar aksidentet. Ky sistem rrit ndjeshëm sigurinë në kantier duke siguruar që çdo punëtor të respektojë standardet e sigurisë dhe duke minimizuar rreziqet e mundshme.
+                    </p>
+                    <a onclick="toggleInfo(this)">Lexo më shumë</a>
+                </div>
+                <!-- Service Item 3 -->
+                <div class="service-item">
+                    <img src="constphoto3.jpg" alt="Pre-construction">
+                    <h3>Raportim i Gjithëpërfshirës</h3>
+                    <p class="intro">Raporte të detajuara mbi pajtueshmërinë me sigurinë, aktivitetin e punëtorëve dhe rreziqet e mundshme.</p>
+                    <p class="details hidden">
+                        Sistemi ynë gjeneron raporte të detajuara mbi pajtueshmërinë me rregullat e sigurisë, duke ofruar një pasqyrë të qartë mbi aktivitetin e punëtorëve dhe rreziqet e mundshme në kantier.
+                    </p>
+                    <a onclick="toggleInfo(this)">Lexo më shumë</a>
+                </div>
+                <!-- Service Item 4 -->
+                <div class="service-item">
+                    <img src="constphoto5.jpg" alt="Management">
+                    <h3>Monitorim me Kamera Inteligjente dhe Kontroll 24/7</h3>
+                    <p class="intro">Sistemi ynë i monitorimit përdor kamera inteligjente për të mbikëqyrur kantierin e ndërtimit në kohë reale, duke siguruar që të gjitha rregullat e sigurisë të respektohen në çdo moment. </p>
+                    <p class="details hidden">
+                        Me ndihmën e inteligjencës artificiale, kamerat janë në gjendje të analizojnë në mënyrë automatike nëse punëtorët janë të pajisur me helmetën, jelekun reflektues dhe pajisjet e tjera mbrojtëse të nevojshme.Monitorimi i vazhdueshëm 24/7 ndihmon në krijimin e një ambienti më të sigurt pune, redukton ndërhyrjet njerëzore dhe garanton që kantieri është gjithmonë nën mbikëqyrje efektive. Ky sistem siguron një kontroll të plotë dhe një nivel më të lartë sigurie në të gjitha fazat e ndërtimit.
+
+
+                    </p>
+                    <a onclick="toggleInfo(this)">Lexo më shumë</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    
+    <script>
+        function toggleInfo(element) {
+    const details = element.previousElementSibling; // Select the "details" paragraph
+    const isVisible = details.classList.contains("visible"); // Check visibility status
+
+    if (isVisible) {
+        details.classList.remove("visible"); // Hide the detailed information
+        element.textContent = "Lexo më shumë"; // Update button text
+    } else {
+        details.classList.add("visible"); // Show the detailed information
+        element.textContent = "Lexo më pak"; // Update button text
+    }
+}
+
+    </script>
+    
+    
+    
+    
+<footer>
+    <div class="footer-content">
+        <div class="social-links">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                <a href="https://x.com/Constructi86215" target="_blank"><img src="Twiter.jpg" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/constructguard/" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="contact-info">
+       
+            <p><span>Email: <a href="mailto: constructguard@gmail.com">constructguard@gmail.com</a></span></p>
+                <p><span>Call: <a href="tel:+01123455678990">+355 69 277 8586</a></span></p>
+                <p><span>Address:</span> Tirane</p>
+        </div>
+    </div>
+    <p class="footer-note">&copy; 2045 Construction Safety. All rights reserved.</p>
+</footer>
+        </body>
+        </html>

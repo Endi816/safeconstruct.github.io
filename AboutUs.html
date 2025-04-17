@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="AboutUsStyle.css">
+
+</head>
+<body>
+    <div class="top-bar">
+        <span>&#128222; Call: <a href="tel:+01123455678990">+355 69 277 8586</a></span>
+        <span>&#9993; Email: <a href="mailto: constructguard@gmail.com">constructguard@gmail.com</a></span>
+        <span>&#x1F4CD; Tirane</span>
+    </div>
+
+    <div class="navbar">
+        <div class="logo">
+            <a href="Main.html">
+                <img src="Logo.png" alt="ConstructGuard Logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="Main.html">Home</a>
+            <a href="Services.html">Services</a>
+            <a href="AboutUs.html">About</a>
+            <a href="Main.html#testimonial">Testimonial</a>
+            <a href="ContactUs.html">Contact Us</a>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div>
+            <h1>Curious to know who we are?</h1>
+            <p class="slogan">"Siguria moderne kërkon zgjidhje inteligjente."</p>
+            <p class="mission">Të rrisim sigurinë në kantier  me teknologji inteligjente.</p>
+        </div>
+    </div>
+    
+
+    <div class="content">
+        <div class="content-section">
+            <div>
+                <h2>Mbikëqyrje Inteligjente</h2>
+                <p>SafeConstruct shfrytëzon infrastrukturën ekzistuese të kamerave për të monitoruar kantieret e ndërtimit dhe për të identifikuar rreziqet e mundshme të sigurisë.</p>
+            </div>
+            <div>
+                <h2>Zbulimi i Automatizuar i Pajisjeve Mbrojtëse</h2>
+                <p>Aplikacioni identifikon automatikisht nëse punëtorët po mbajnë Pajisjet Personale të Mbrojtjes (PPE) të kërkuara dhe dërgon njoftime në rast të shkeljeve.</p>
+            </div>
+        </div>
+    </div>
+<!-- Why Choose Us Section -->
+<div class="why-container" id="whyChooseUs">
+    <img src="constructionSafety.jpg" alt="Construction Safety">
+    <div class="why-content">
+        <h1>Why Choose Us</h1>
+        <div class="why-card">
+            <div class="why-icon">🚧</div>
+            <div class="why-text">
+                <h3>Siguri e Përmirësuar për Punëtorët</h3>
+                <p>Zvogëlimi i rrezikut të aksidenteve dhe lëndimeve duke promovuar respektimin e rregullave për përdorimin e PPE.</p>
+            </div>
+        </div>
+        <div class="why-card">
+            <div class="why-icon">🦺</div>
+            <div class="why-text">
+                <h3>Pajtueshmëri më e Lartë në Kantier</h3>
+                <p>Sigurimi i respektimit të rregulloreve të sigurisë dhe minimizimi i gjobave të mundshme.</p>
+            </div>
+        </div>
+        <div class="why-card">
+            <div class="why-icon">📈</div>
+            <div class="why-text">
+                <h3>Produktivitet i Rritur</h3>
+                <p>Reduktimi i kohës së humbur për shkak të aksidenteve dhe krijimi i një mjedisi më të sigurt për punëtorët.</p>
+            </div>
+        </div>
+        <div class="why-card">
+            <div class="why-icon">⚖️</div>
+            <div class="why-text">
+                <h3>Përgjegjësi e Reduktuar</h3>
+                <p>Mbrojtja e kompanive nga pasojat e mundshme ligjore dhe financiare për shkak të shkeljeve të sigurisë.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+     <script>
+document.addEventListener('DOMContentLoaded', () => {
+const whySection = document.querySelector('.why-container');
+const cards = document.querySelectorAll('.why-card');
+
+const whyObserverOptions = {
+    root: null, // Observes changes relative to the viewport
+    threshold: 0.1 // Trigger when 10% of the section is visible
+};
+
+const whyObserverCallback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            whySection.classList.add('visible');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, index * 300); // Animate each card with a delay
+            });
+        } else {
+            whySection.classList.remove('visible');
+            cards.forEach(card => {
+                card.classList.remove('visible');
+            });
+        }
+    });
+};
+
+const whyObserver = new IntersectionObserver(whyObserverCallback, whyObserverOptions);
+whyObserver.observe(whySection);
+});
+
+</script>
+<div class="team-section">
+    <h2 class="team-heading">Meet Our Team</h2>
+    <div class="team-grid">
+        <!-- Existing Team Member Content -->
+    </div>
+</div>
+
+<div class="team-section">
+       
+
+    <div class="team-grid">
+        <!-- Endi -->
+        <div class="team-member">
+            <div class="team-photo" style="background-image: url('user.png');"></div>
+            <div class="team-description">
+                <h3>Endi</h3>
+                <p>Një zhvillues i aftë dhe inovativ, i specializuar në krijimin e aplikacioneve desktop. Me një pasion të madh për inteligjencën artificiale, ai fokusohet në implementimin e sistemit të skanimit të PPE duke përdorur YOLO dhe konfigurimin e njoftimeve automatike me SMS, duke siguruar një sistem efikas dhe të saktë për sigurinë në ndërtim.</p>
+            </div>
+        </div>
+
+        <!-- Endri -->
+        <div class="team-member">
+            <div class="team-description">
+                <h3>Endri</h3>
+                <p>Një zhvillues me vizion të gjerë, i cili kombinon aftësitë e tij në frontend dhe backend për të krijuar aplikacione funksionale dhe të optimizuara. Ai është përgjegjës për dizajnimin dhe implementimin e faqes së internetit dhe aplikacionit, duke përdorur teknologji moderne për të siguruar përdorueshmëri të lartë dhe aksesibilitet të shkëlqyer.</p>
+            </div>
+            <div class="team-photo" style="background-image: url('user.png');"></div>
+        </div>
+
+        <!-- Leonis -->
+        <div class="team-member">
+            <div class="team-photo" style="background-image: url('user.png');"></div>
+            <div class="team-description">
+                <h3>Leonis</h3>
+                <p>Një ekspert në zhvillimin e aplikacioneve mobile dhe frontend-it, me një sy të mprehtë për detajet vizuale dhe dizajnin estetik. Ai punon për të krijuar një faqe interneti dhe aplikacion mobil tërheqës, të përgjegjshëm dhe lehtësisht të navigueshëm, duke siguruar një përvojë të shkëlqyer për përdoruesit. Me aftësitë e tij në data acquisition dhe eksplorimin e të dhënave, ai ndihmon gjithashtu në organizimin dhe optimizimin e informacionit brenda sistemit.</p>
+            </div>
+        </div>
+
+        <!-- Arlind -->
+        <div class="team-member">
+            <div class="team-description">
+                <h3>Arlind</h3>
+                <p>Një programues i përkushtuar, i cili specializohet në ndërtimin e aplikacioneve mobile dhe optimizimin e performancës. Ai kujdeset për kodim të pastër dhe mirëmbajtje të sistemit, duke garantuar një funksionalitet të qetë dhe të shkallëzueshëm për aplikacionin. Përveç kësaj, ai luan një rol kyç në aspektet e marketingut dhe krijimin e identitetit vizual të projektit.</p>
+            </div>
+            <div class="team-photo" style="background-image: url('user.png');"></div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="social-links">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                <a href="https://x.com/Constructi86215" target="_blank"><img src="Twiter.jpg" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/constructguard/" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="contact-info">
+
+            <p><span>Email: <a href="mailto: constructguard@gmail.com">constructguard@gmail.com</a></span></p>
+                <p><span>Call: <a href="tel:+01123455678990">+355 69 277 8586</a></span></p>
+                <p><span>Address:</span> Tirane</p>
+        </div>
+    </div>
+    <p class="footer-note">&copy; 2045 Construction Safety. All rights reserved.</p>
+</footer>
+</body>
+</html>

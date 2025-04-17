@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-image: url('construction.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fffcf2;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Full-page shadow overlay */
+            z-index: -1;
+            pointer-events: none;
+        }
+        /* Top Bar */
+        .top-bar, .navbar {
+            background: rgba(37, 36, 34, 0.6); /* Transparent black background */
+            color: #fffcf2;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        .top-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            gap: 30px;
+            border-bottom: 2px solid #eb5e28;
+        }
+        .top-bar a {
+            color: #eb5e28;
+
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .top-bar a:hover {
+            color: #ccc5b9;
+            transform: scale(1.1);
+        }
+        .top-bar img {
+            width: 20px;
+            height: 20px;
+        }
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar .logo {
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #eb5e28;
+            text-shadow: 0 4px 6px rgba(37, 36, 34, 0.5);
+        }
+        .navbar .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .navbar .nav-links a {
+            text-decoration: none;
+            color: #fffcf2;
+            font-size: 16px;
+            padding: 5px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+        .navbar .nav-links a:hover {
+            background-color: #eb5e28;
+            color: #fffcf2;
+            transform: scale(1.05);
+        }
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            text-align: center;
+            padding: 0 20px;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(37, 36, 34, 0.7), transparent);            z-index: 0;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #eb5e28; 
+            text-shadow: 2px 2px 5px rgba(37, 36, 34, 0.8);
+            animation: slideIn 1s ease forwards;
+        }
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .hero-buttons a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .btn-orange {
+            background-color: #eb5e28;
+            box-shadow: 0 4px 8px rgba(235, 94, 40, 0.5);
+        }
+        .btn-orange:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(235, 94, 40, 0.7);
+        }
+        .btn-black {
+            background-color: #403d39;
+            box-shadow: 0 4px 8px rgba(64, 61, 57, 0.5);
+        }
+        .btn-black:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(64, 61, 57, 0.7);
+        }
+        /* Services Section */
+        .services-container {
+            background: #fffcf2; /* Sfond i bardhë */
+            color: #252422;
+            /* Ngjyrë teksti e zezë për lexueshmëri */
+    margin: 0 auto; /* Hiq margjinat anësore */
+    width: 100%; /* Zgjero gjerësinë në 100% të faqes */
+    padding: 50px 20px; /* Mbaj hapësirat e brendshme */
+    border-radius: 0; /* Hiq këndet e rrumbullakosura nëse nuk duhen */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Mbaj hijet për efekt estetik */
+}
+
+
+        .services {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .services h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .service-items {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .service-item {
+            flex: 1 1 22%;
+            text-align: center;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #fffcf2;
+            position: relative;
+        }
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .service-item img {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+        .service-item:hover img {
+            transform: scale(1.1);
+        }
+        .service-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .service-item p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            display: none;
+        }
+        .service-item a {
+            text-decoration: none;
+            color: #eb5e28;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .service-item a:hover {
+            color: #ccc5b9;
+
+        }
+        /* Animations */
+        @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-out;
+    opacity: 1; /* Ensure it stays visible after animation */
+}
+        .services-about-container {
+    margin: 0 auto;
+    padding: 50px 20px;
+    background-color: white;
+    border-radius: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.services-container, .about-us {
+    padding: 35px; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.service-item p.details.visible {
+    display: block; /* Show when toggled */
+    animation: fadeIn 0.5s ease; /* Smooth fade-in */
+}
+
+/* Buttons (Read More) */
+.service-item a {
+    display: inline-block;
+    text-decoration: none;
+    color: #eb5e28; /* Ngjyra fillestare e tekstit */
+    font-weight: bold;
+    padding: 8px 16px;
+    border: 2px solid #eb5e28;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Stili për butonin gjatë hover */
+.service-item a:hover {
+    background: #eb5e28; /* Ngjyra portokalli kur mausi është mbi buton */
+    color: #fff; /* Teksti bëhet i bardhë */
+    border-color: #f97316; /* Ruajtja e bordurës portokalli */
+}
+.service-item:hover a:hover {
+    background: #f97316;
+    color: white;
+}
+
+
+
+/*About Us*/
+
+/* Updated About Us Section CSS */
+.about-us {
+    margin-top: 50px; /* Adjust the value as needed to move the section down */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #fffcf2;
+    padding: 40px;
+    border-radius: 0px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+
+.about-us.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-content {
+    flex: 1;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.about-content.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.about-image.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #252422;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.about-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #eb5e28;
+    border-radius: 2px;
+}
+
+.about-content .subtitle {
+    font-size: 1.3rem;
+    color: #403d39;
+    margin-bottom: 15px;
+}
+
+.about-content .description {
+    font-size: 1rem;
+    color: #403d39;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.about-content .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #eb5e28;
+    color: #fffcf2;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(235, 94, 40, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-content .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(235, 94, 40, 0.6);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+ /* testimonial*/
+
+        /* testimonial Slider */
+        .testimonial-slider {
+            width: 90%;
+            margin: 50px auto;
+            text-align: center;
+            color: #252422;
+            position: relative;
+            background: rgba(204, 197, 185, 0.9);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+
+        .testimonial-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #eb5e28;
+
+        }
+
+.slider-container {
+    position: relative;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 400%; /* For 4 slides */
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 80%;
+    text-align: left;
+}
+
+.profile img {
+    width: 150px;
+    height: 195px;
+    border-radius: 14%;
+    border: 4px solid #b2a9a6;
+    object-fit: cover;
+}
+
+.info {
+    flex: 1;
+}
+
+.info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #eb5e28;
+}
+
+.info p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc5b9;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #eb5e28;
+}
+
+ /* Why Choose Us Section */
+ .why-container {
+            max-width: none;
+            margin: 0px auto;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            text-align: left;
+            background-color: #fffcf2;
+            padding: 60px 30px;
+            border-radius: none;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .why-container.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .why-container img {
+            width: 400px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(64, 61, 57, 0.1);
+            transform: scale(0.9);
+            transition: transform 0.8s ease;
+        }
+
+        .why-container img:hover {
+            transform: scale(1);
+        }
+
+        .why-content {
+            flex: 1;
+        }
+
+        .why-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+            color: #eb5e28;
+            font-weight: bold;
+            animation: fadeInLeft 1s ease;
+        }
+
+        .why-card {
+            display: flex;
+            align-items: center;
+            background-color: #fffcf2;
+            box-shadow: 0 4px 10px rgba(64, 61, 57, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 12px;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: transform 0.6s ease, opacity 0.6s ease;
+        }
+
+        .why-card.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .why-card .why-icon {
+            flex-shrink: 0;
+            width: 70px;
+            height: 70px;
+            background-color: #eb5e28; 
+            color: #fffcf2;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+            margin-right: 20px;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+        }
+
+        .why-card:hover .why-icon {
+            transform: scale(1.1);
+        }
+
+        .why-card .why-text {
+            flex-grow: 1;
+        }
+
+        .why-card .why-text h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #252422;
+        }
+
+        .why-card .why-text p {
+            margin: 5px 0 0;
+            font-size: 1rem;
+            color: #403d39;
+            line-height: 1.6;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    /* Kontakt Seksioni */
+#contact-section {
+    position: relative;
+    padding: 50px;
+    background: linear-gradient(135deg, rgba(64, 61, 57, 0.95), rgba(37, 36, 34, 0.95));
+}
+
+.contact-content {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-info h2 {
+    color: #eb5e28;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.contact-info p span {
+    font-weight: bold;
+}
+
+.contact-form h2 {
+    color: #eb5e28;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Stilet e Fushave të Formës */
+.form-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #ccc;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    background: #252422;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: #fffcf2;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border: 1px solid #eb5e28;
+}
+
+.form-group input:focus + label,
+.form-group textarea:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 15px;
+    font-size: 0.85rem;
+    color: #eb5e28;
+    transform: none;
+}
+
+/* Butoni i Submit */
+.submit-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    background: #eb5e28;
+    color: #fffcf2;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(64, 61, 57, 0.2);
+}
+
+.submit-btn:hover {
+    background: #ccc5b9;
+}
+
+
+        footer {
+            background: #403d39;
+            color: #fffcf2;
+            text-align: center;
+            padding: 20px;
+            margin-top: 0px;
+        }
+
+        footer .social-links {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        footer .social-links a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #eb5e28;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        footer .social-links a img {
+            width: 30px;
+            height: 30px;
+            
+           
+            
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer .social-links a:hover {
+            color: #ccc5b9;
+            transform: translateY(-3px);
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+
+        @media (max-width: 576px) {
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 1.8rem; /* Redukto madhësinë e tekstit */
+    }
+    .hero-buttons {
+        flex-direction: column; /* Rendit butonat vertikalisht */
+        gap: 15px; /* Hapësirë ndërmjet butonave */
+    }
+    .hero-buttons a {
+        font-size: 1rem; /* Përshtat madhësinë e butonave */
+        padding: 10px 20px; /* Redukto padding */
+    }
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column; /* Rendit elementet vertikalisht */
+        text-align: center;
+        gap: 15px;
+    }
+
+    /* Services Section */
+    .service-items {
+        flex-direction: column; /* Shfaq shërbimet si një kolonë */
+        gap: 20px;
+    }
+    .service-item {
+        width: 100%; /* Zgjero kutinë në gjerësi të plotë */
+        margin: 0 auto; /* Qendro elementin */
+    }
+    .service-item img {
+        width: 50px; /* Redukto madhësinë e ikonave */
+        height: 50px;
+    }
+
+    /* About Us Section */
+    .about-us {
+        flex-direction: column; /* Rendit tekstin dhe imazhin vertikalisht */
+        text-align: center;
+        gap: 20px;
+        padding: 20px; /* Redukto padding */
+    }
+    .about-content h2 {
+        font-size: 1.8rem; /* Redukto madhësinë e titullit */
+    }
+    .about-image img {
+        width: 80%; /* Përshtat gjerësinë e imazhit */
+        margin: 0 auto;
+    }
+
+
+     /* Contact Content */
+    .contact-content {
+        display: flex; /* Ensure flexbox layout */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center all content horizontally */
+        gap: 20px; /* Space between contact info and form */
+        padding: 15px; /* Add padding around the section */
+    }
+
+    /* Contact Info */
+    .contact-info {
+        text-align: center; /* Center-align the text */
+        margin-bottom: 10px; /* Add spacing below the contact info */
+    }
+
+    /* Contact Form */
+    .contact-form {
+        width: 100%; /* Make the form take up the full width */
+        max-width: 500px; /* Set a maximum width for better readability */
+        margin: 0 auto; /* Center the form horizontally */
+        padding: 15px; /* Add padding inside the form */
+        border-radius: 8px; /* Rounded corners for aesthetics */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    }
+
+    /* Form Fields */
+    .form-group input,
+    .form-group textarea {
+        width: 100%; /* Input fields take full width */
+        padding: 10px; /* Padding for better usability */
+        margin-bottom: 15px; /* Spacing below each input */
+        border: 1px solid #7c7b7b; /* Border for inputs */
+        border-radius: 5px; /* Slightly rounded corners */
+    }
+
+    /* Submit Button */
+    .submit-btn {
+        width: 100%; /* Button spans the full width */
+        padding: 12px; /* Adjust padding for the button */
+        font-size: 1rem; /* Ensure font size is readable */
+        background-color: #eb5e28; /* Button color */
+        color: #fff; /* Button text color */
+        font-weight: bold; /* Bold text */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+    }
+
+    /* Reduce Spacing for Mobile */
+    .contact-content > * {
+        margin-bottom: 10px; /* Add spacing between all elements */
+    }
+
+
+    /* Footer */
+    footer {
+        padding: 15px;
+    }
+    footer .social-links {
+        flex-wrap: wrap; /* Radhit ikonat në rreshta të rinj */
+        gap: 15px;
+    }
+    footer .social-links a img {
+        width: 25px; /* Redukto madhësinë e ikonave */
+        height: 25px;
+    }
+
+    /* Why Choose Us Section */
+    .why-container {
+        flex-direction: column; /* Rendit pjesët vertikalisht */
+        text-align: center;
+        gap: 20px;
+    }
+    .why-card {
+        width: 100%; /* Zgjero kartat në gjerësi të plotë */
+        margin: 0 auto; /* Qendro kartat */
+    }
+    .why-container img {
+        width: 80%; /* Përshtat madhësinë e imazhit */
+        margin: 0 auto;
+    }
+
+}
+/* Responsive Design for Mobile Screens */
+/* Responsive Design for Mobile Screens (Max: 576px) */
+@media (max-width: 576px) {
+   
+    .testimonial-slider {
+        width: 95%; /* Pak më e gjerë për të siguruar që gjithçka të duket */
+        margin: 20px auto; /* Hapësirë nga seksionet e tjera */
+        padding: 20px;
+        background: rgba(204, 197, 185, 0.9);
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .profile {
+        display: flex;
+        align-items: flex-start; /* Teksti fillon nga lart */
+        gap: 15px;
+    }
+
+    .profile img {
+        width: 100px;
+        height: 120px;
+        border-radius: 12%;
+        flex-shrink: 0; /* Sigurohet që imazhi të mos zvogëlohet */
+    }
+
+    .info {
+        flex: 1; /* Sigurohet që hapësira të përshtatet për tekstin */
+        text-align: left; /* Teksti i shtrirë në të majtë */
+    }
+
+    .info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+        color: #eb5e28;
+    }
+
+    .info p {
+        font-size: 0.9rem;
+        line-height: 1.4; /* Hapësirë e mjaftueshme midis rreshtave */
+        margin: 5px 0;
+        white-space: normal; /* Sigurohet që teksti të thyejë linjat dhe të duket i gjithi */
+        overflow: visible; /* Asnjë tekst nuk do të fshihet */
+        width: 280px;
+    }
+}
+@media (max-width: 576px) {
+    .top-bar {
+        flex-direction: row; /* Stack items vertically */
+        gap: 55px; /* Reduce gap for better fit */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .top-bar span {
+        font-size: 12px; /* Smaller font for compact display */
+    }
+
+    .top-bar a {
+        font-size: 12px; /* Adjust font size */
+    }
+}
+@media (max-width: 576px){
+    .social-icons a img {
+    margin-left: 186px;
+}
+}
+
+
+    </style>
+    <script>
+        function toggleInfo(element) {
+            const paragraph = element.previousElementSibling;
+            paragraph.style.display = paragraph.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <span>&#128222; Call: <a href="tel:+01123455678990">+355 69 277 8586</a></span>
+        <span>&#9993; Email: <a href="mailto:mail@domain.com">construction@gmail.com</a></span>
+        <span>&#x1F4CD; Tirane</span>
+    </div>
+    
+
+    <!-- Main Navbar -->
+    <div class="navbar">
+        <div class="logo">MR CODER</div>
+        <div class="nav-links">
+            <a href="Main.html">Home</a>
+            <a href="Services.html">Services</a>
+            <a href="AboutUs.html">About</a>
+            <a href="#testimonial">Testimonial</a>
+            <a href="ContactUs.html">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Architect Builder Construction Services</h1>
+            <div class="hero-buttons">
+                <a href="ContactUs.html" class="btn-orange">Contact Us</a>
+                <a href="AboutUs.html" class="btn-black">About Us</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="services-about-container">
+        <!-- Services Section -->
+        <div class="services-container">
+            <div class="services">
+                <h2>Services</h2>
+                <p>We provide a wide range of professional construction services tailored to your needs.</p>
+            </div>
+            <div class="service-items">
+                <!-- Service Item 1 -->
+                <div class="service-item">
+                    <img src="consphoto1.jpg" alt="Crane">
+                    <h3>CONSTRUCTION SERVICES</h3>
+                    <p class="intro">We handle project planning, sourcing, and execution with precision and expertise.</p>
+                    <p class="details hidden">
+                        Our construction services ensure high-quality outcomes while meeting deadlines and budgets. 
+                        We utilize modern tools to streamline processes and maintain excellent safety standards throughout every project phase.
+                    </p>
+                    <a onclick="toggleInfo(this)">Read More</a>
+                </div>
+                <!-- Service Item 2 -->
+                <div class="service-item">
+                    <img src="constphoto2.jpg" alt="Building">
+                    <h3>BUILDING MODELING</h3>
+                    <p class="intro">We design and visualize structures using advanced modeling tools.</p>
+                    <p class="details hidden">
+                        Our expertise in 3D modeling and BIM technology ensures highly accurate simulations of construction projects. 
+                        This helps minimize errors, optimize resources, and provide a clear project overview before execution.
+                    </p>
+                    <a onclick="toggleInfo(this)">Read More</a>
+                </div>
+                <!-- Service Item 3 -->
+                <div class="service-item">
+                    <img src="constphoto3.jpg" alt="Pre-construction">
+                    <h3>PRE CONSTRUCTION</h3>
+                    <p class="intro">We ensure project feasibility and address risks before construction begins.</p>
+                    <p class="details hidden">
+                        Our pre-construction services include feasibility analysis, detailed budgeting, and risk assessment to avoid 
+                        unforeseen delays. We help you make informed decisions before work starts.
+                    </p>
+                    <a onclick="toggleInfo(this)">Read More</a>
+                </div>
+                <!-- Service Item 4 -->
+                <div class="service-item">
+                    <img src="constphoto5.jpg" alt="Management">
+                    <h3>MANAGEMENT</h3>
+                    <p class="intro">We coordinate teams, monitor progress, and ensure project success.</p>
+                    <p class="details hidden">
+                        Our management services ensure all aspects of your project align with safety, quality, and budget requirements. 
+                        We handle communication, scheduling, and team coordination to keep your project on track.
+                    </p>
+                    <a onclick="toggleInfo(this)">Read More</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            function toggleInfo(element) {
+        const details = element.previousElementSibling; // Select the "details" paragraph
+        const isVisible = details.classList.contains("visible"); // Check visibility status
+    
+        if (isVisible) {
+            details.classList.remove("visible"); // Hide the detailed information
+            element.textContent = "Read More"; // Update button text
+        } else {
+            details.classList.add("visible"); // Show the detailed information
+            element.textContent = "Read Less"; // Update button text
+        }
+    }
+    
+        </script>
+    
+        
+        
+    
+        <!-- About Us Section -->
+        <section class="about-us">
+            <div class="about-content">
+                <h2>ABOUT US</h2>
+                <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                <p class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <a href="AboutUs.html" class="btn">Read More</a>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="Twiter.jpg" alt="Twitter"></a>
+                    <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="group.jpg" alt="About Us Image">
+            </div>
+        </section>
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const aboutSection = document.querySelector('.about-us');
+    const aboutContent = document.querySelector('.about-content');
+    const aboutImage = document.querySelector('.about-image');
+
+    const aboutObserverOptions = {
+        root: null, // Observes changes relative to the viewport
+        threshold: 0.1 // Trigger when 10% of the section is visible
+    };
+
+    const aboutObserverCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                aboutSection.classList.add('visible');
+                aboutContent.classList.add('visible');
+                aboutImage.classList.add('visible');
+            } else {
+                aboutSection.classList.remove('visible');
+                aboutContent.classList.remove('visible');
+                aboutImage.classList.remove('visible');
+            }
+        });
+    };
+
+    const aboutObserver = new IntersectionObserver(aboutObserverCallback, aboutObserverOptions);
+    aboutObserver.observe(aboutSection);
+});
+
+
+
+
+
+        </script>
+    </div>
+    
+    <!-- Testimonial Section Desktop-->
+    <div class="testimonial-slider" id="testimonial">
+        <h2 class="testimonial-title">Testimonial</h2>
+        <div class="slider-container">
+            <div class="slide">
+                <div class="profile">
+                    <img src="leo.jpg" alt="Person 1">
+                    <div class="info">
+                        <h3>Person 1</h3>
+                        <p>Role: Project Manager</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="profile">
+                    <img src="lindi.jpg" alt="Person 2">
+                    <div class="info">
+                        <h3>Person 2</h3>
+                        <p>Role: Architect</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="profile">
+                    <img src="endi.jpg" alt="Person 3">
+                    <div class="info">
+                        <h3>Person 3</h3>
+                        <p>Role: Engineer</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="profile">
+                    <img src="endri.jpg" alt="Person 4">
+                    <div class="info">
+                        <h3>Person 4</h3>
+                        <p>Role: Designer</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+        </div><div class="dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+       
+        
+
+    <script>
+        const sliderContainer = document.querySelector('.slider-container');
+const slides = Array.from(document.querySelectorAll('.slide'));
+const dotsContainer = document.querySelector('.dots');
+let currentIndex = 1; // Start with the first real slide
+let autoSlideInterval;
+
+// Clone first and last slides
+const firstClone = slides[0].cloneNode(true);
+const lastClone = slides[slides.length - 1].cloneNode(true);
+
+sliderContainer.appendChild(firstClone); // Add the first slide clone to the end
+sliderContainer.prepend(lastClone); // Add the last slide clone to the start
+
+const updatedSlides = Array.from(document.querySelectorAll('.slide')); // Update slides array
+sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`; // Set initial position
+
+// Create dots
+dotsContainer.innerHTML = slides
+    .map((_, i) => `<span class="dot ${i === 0 ? 'active' : ''}" data-index="${i + 1}"></span>`)
+    .join('');
+const dots = Array.from(document.querySelectorAll('.dot'));
+
+// Show slide instantly
+function showSlide(index, instant = false) {
+    if (instant) {
+        sliderContainer.style.transition = "none"; // Disable smooth transition
+    } else {
+        sliderContainer.style.transition = "transform 0.8s ease-in-out"; // Enable smooth transition
+    }
+    sliderContainer.style.transform = `translateX(-${index * 100}%)`;
+
+    currentIndex = index;
+
+    // Update dots
+    const normalizedIndex = (currentIndex - 1 + slides.length) % slides.length;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[normalizedIndex].classList.add('active');
+}
+
+// Move to the next slide
+function moveToNextSlide() {
+    if (currentIndex >= updatedSlides.length - 1) {
+        showSlide(updatedSlides.length - 1); // Smoothly transition to the cloned first slide
+        setTimeout(() => {
+            showSlide(1, true); // Instantly jump to the real first slide
+        }, 800); // Match transition duration
+    } else {
+        showSlide(currentIndex + 1);
+    }
+}
+
+// Move to the previous slide
+function moveToPrevSlide() {
+    if (currentIndex <= 0) {
+        showSlide(0); // Smoothly transition to the cloned last slide
+        setTimeout(() => {
+            showSlide(updatedSlides.length - 2, true); // Instantly jump to the real last slide
+        }, 800); // Match transition duration
+    } else {
+        showSlide(currentIndex - 1);
+    }
+}
+
+// Add event listeners to dots
+dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+        stopAutoSlide(); // Pause auto-slide
+        const index = parseInt(dot.dataset.index, 10);
+        showSlide(index, true); // Instantly jump to the clicked slide
+        startAutoSlide(); // Resume auto-slide after interaction
+    });
+});
+
+// Auto-slide function
+function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+        moveToNextSlide();
+    }, 7000); // Set auto-slide interval to 7 seconds
+}
+
+// Stop auto-slide function
+function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+}
+
+// Pause auto-slide on hover
+document.querySelector('.testimonial-slider').addEventListener('mouseenter', stopAutoSlide);
+
+// Resume auto-slide on hover leave
+document.querySelector('.testimonial-slider').addEventListener('mouseleave', startAutoSlide);
+
+// Initialize slider
+startAutoSlide();
+
+    </script>
+
+     <!-- Why Choose Us Section -->
+     <div class="why-container" id="whyChooseUs">
+        <img src="constructionSafety.jpg" alt="Construction Safety">
+        <div class="why-content">
+            <h1>Why Choose Us?</h1>
+            <div class="why-card">
+                <div class="why-icon">🏗️</div>
+                <div class="why-text">
+                    <h3>Project done on time</h3>
+                    <p>We ensure your projects are completed efficiently and on schedule, meeting all your expectations.</p>
+                </div>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">📞</div>
+                <div class="why-text">
+                    <h3>Always available</h3>
+                    <p>Our team is always here to assist you, ensuring smooth communication and support.</p>
+                </div>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">👥</div>
+                <div class="why-text">
+                    <h3>Professional and responsible</h3>
+                    <p>We take pride in delivering professional and responsible services to all our clients.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+         <script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const whySection = document.querySelector('.why-container');
+    const cards = document.querySelectorAll('.why-card');
+
+    const whyObserverOptions = {
+        root: null, // Observes changes relative to the viewport
+        threshold: 0.1 // Trigger when 10% of the section is visible
+    };
+
+    const whyObserverCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                whySection.classList.add('visible');
+                cards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.classList.add('visible');
+                    }, index * 300); // Animate each card with a delay
+                });
+            } else {
+                whySection.classList.remove('visible');
+                cards.forEach(card => {
+                    card.classList.remove('visible');
+                });
+            }
+        });
+    };
+
+    const whyObserver = new IntersectionObserver(whyObserverCallback, whyObserverOptions);
+    whyObserver.observe(whySection);
+});
+
+</script>
+
+<section id="contact-section">
+    <div class="contact-content">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Email: <span>company_email@com</span></p>
+            <p>Phone: <span>361-688-5824</span></p>
+            <p>Address: <span>4826 White Avenue, Corpus Christi, Texas</span></p>
+        </div>
+        <div class="contact-form">
+            <h2>Send a Message</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        placeholder=" " 
+                        pattern="[A-Za-z\s]+" 
+                        title="Please enter only letters and spaces" 
+                        required
+                    >
+                    <label for="name">Full Name</label>
+                </div>
+                <div class="form-group">
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder=" " 
+                        required
+                    >
+                    <label for="email">Your Email</label>
+                </div>
+                <div class="form-group">
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        placeholder=" " 
+                        required
+                    ></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+    const nameField = document.getElementById("name");
+    const nameValue = nameField.value;
+
+    // Kontrolloni që emri përmban vetëm shkronja dhe hapësira
+    const nameRegex = /^[A-Za-z\s]+$/;
+
+    if (!nameRegex.test(nameValue)) {
+        e.preventDefault(); // Ndalo dërgimin e formës
+        alert("Full Name should contain only letters and spaces.");
+        nameField.focus();
+    }
+});
+
+</script>
+<footer>
+    <div class="social-links">
+        <a href="#"><img src="facebook.png" alt="Facebook"> Facebook</a>
+        <a href="#"><img src="Twiter.jpg" alt="Twitter"> Twitter</a>
+        <a href="#"><img src="instagram.png" alt="Instagram"> Instagram</a>
+    </div>
+    <p>&copy; 2045 Construction Safety. All rights reserved.</p>
+</footer>
+</body>
+</html>
+

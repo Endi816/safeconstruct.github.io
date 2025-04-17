@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Services</title>
+    <link rel="stylesheet" href="Main.css">
+
+    <script>
+        function toggleInfo(element) {
+            const paragraph = element.previousElementSibling;
+            paragraph.style.display = paragraph.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <span>&#128222; Call: <a href="tel:+01123455678990">+355 69 277 8586</a></span>
+        <span>&#9993; Email: <a href="mailto: constructguard@gmail.com">constructguard@gmail.com</a></span>
+        <span>&#x1F4CD; Tirane</span>
+    </div>
+    
+
+    <!-- Main Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="Main.html">
+                <img src="Logo.png" alt="ConstructGuard Logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="Main.html">Home</a>
+            <a href="Services.html">Services</a>
+            <a href="AboutUs.html">About</a>
+            <a href="#testimonial">Testimonial</a>
+            <a href="ContactUs.html">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Construction Safety</h1>
+            <div class="hero-buttons">
+                <a href="ContactUs.html" class="btn-orange">Contact Us</a>
+                <a href="AboutUs.html" class="btn-black">About Us</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="services-about-container">
+        <!-- Services Section -->
+        <div class="services-container">
+            <div class="services">
+                <h2>Services</h2>
+                <p>Ne ofrojmë një sistem të avancuar monitorimi me AI që siguron pajtueshmërinë e punëtorëve të ndërtimit me rregullat e PPE, duke rritur sigurinë dhe efikasitetin në kantier.</p>
+            </div>
+            <div class="service-items">
+                <!-- Service Item 1 -->
+                <div class="service-item">
+                    <img src="consphoto1.jpg" alt="Crane">
+                    <h3>Automated PPE Detection</h3>
+                    <p class="intro"></p>
+                    <p class="details hidden">
+                        Identifikim në kohë reale i helmetave mbrojtëse, jelekëve të sigurisë dhe pajisjeve të tjera thelbësore.
+                    </p>
+                    <a onclick="toggleInfo(this)">Lexo më shumë</a>
+                </div>
+                <!-- Service Item 2 -->
+                <div class="service-item">
+                    <img src="constphoto2.jpg" alt="Building">
+                    <h3>Njoftime të Menjëhershme</h3>
+                    <p class="intro"></p>
+                    <p class="details hidden">
+                        Dërgimi i sinjalizimeve për menaxherët e kantierit në rast të shkeljeve të rregullave të PPE.
+                    </p>
+                    <a onclick="toggleInfo(this)">Lexo më shumë</a>
+                </div>
+                <!-- Service Item 3 -->
+                <div class="service-item">
+                    <img src="constphoto3.jpg" alt="Pre-construction">
+                    <h3>Raportim i Gjithëpërfshirës</h3>
+                    <p class="intro"></p>
+                    <p class="details hidden">
+                        Raporte të detajuara mbi pajtueshmërinë me sigurinë, aktivitetin e punëtorëve dhe rreziqet e mundshme.
+                    </p>
+                    <a onclick="toggleInfo(this)">Lexo më shumë</a>
+                </div>
+                <!-- Service Item 4 -->
+                <div class="service-item">
+                    <img src="constphoto5.jpg" alt="Management">
+                    <h3>Monitorim me Kamera Inteligjente dhe Kontroll 24/7</h3>
+                    <p class="intro"></p>
+                    <p class="details hidden">
+                        Përdorimi i kamerave inteligjente për monitorim të vazhdueshëm të kantierit dhe identifikim të çdo shkeljeje të sigurisë në kohë reale.
+                    </p>
+                    <a onclick="toggleInfo(this)">Lexo më shumë</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            function toggleInfo(element) {
+        const details = element.previousElementSibling; // Select the "details" paragraph
+        const isVisible = details.classList.contains("visible"); // Check visibility status
+    
+        if (isVisible) {
+            details.classList.remove("visible"); // Hide the detailed information
+            element.textContent = "Lexo më shumë"; // Update button text
+        } else {
+            details.classList.add("visible"); // Show the detailed information
+            element.textContent = "Lexo më pak"; // Update button text
+        }
+    }
+    
+        </script>
+    
+        
+        
+    
+        <!-- About Us Section -->
+        <section class="about-us">
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p class="subtitle">Misioni ynë është të automatizojmë dhe përmirësojmë standardet e sigurisë në ndërtim. </p>
+                <p class="description">
+                    Ne ofrojmë një sistem inteligjent sigurie për kantieret e ndërtimit, duke përdorur AI për të skanuar punëtorët në kohë reale dhe të sigurojmë pajtueshmërinë me PPE. Nëse mungojnë pajisjet mbrojtëse, dërgojmë njoftime automatike tek menaxherët, duke rritur sigurinë dhe reduktuar aksidentet.                </p>
+                <a href="AboutUs.html" class="btn">Lexo më shumë</a>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                    <a href="https://x.com/Constructi86215" target="_blank"><img src="Twiter.jpg" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/constructguard/" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="group.jpg" alt="About Us Image">
+            </div>
+        </section>
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const aboutSection = document.querySelector('.about-us');
+    const aboutContent = document.querySelector('.about-content');
+    const aboutImage = document.querySelector('.about-image');
+
+    const aboutObserverOptions = {
+        root: null, // Observes changes relative to the viewport
+        threshold: 0.1 // Trigger when 10% of the section is visible
+    };
+
+    const aboutObserverCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                aboutSection.classList.add('visible');
+                aboutContent.classList.add('visible');
+                aboutImage.classList.add('visible');
+            } else {
+                aboutSection.classList.remove('visible');
+                aboutContent.classList.remove('visible');
+                aboutImage.classList.remove('visible');
+            }
+        });
+    };
+
+    const aboutObserver = new IntersectionObserver(aboutObserverCallback, aboutObserverOptions);
+    aboutObserver.observe(aboutSection);
+});
+
+
+
+
+
+        </script>
+    </div>
+    
+    <!-- Testimonial Section Desktop-->
+    <div class="testimonial-slider" id="testimonial">
+        <h2 class="testimonial-title">Testimonial</h2>
+        <div class="slider-container">
+            <div class="slide">
+                <div class="profile">
+                    <img src="leo.jpg" alt="Person 1">
+                    <div class="info">
+                        <h3>Person 1</h3>
+                        <p>Role: Project Manager</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="profile">
+                    <img src="lindi.jpg" alt="Person 2">
+                    <div class="info">
+                        <h3>Person 2</h3>
+                        <p>Role: Architect</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="profile">
+                    <img src="endi.jpg" alt="Person 3">
+                    <div class="info">
+                        <h3>Person 3</h3>
+                        <p>Role: Engineer</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="profile">
+                    <img src="endri.jpg" alt="Person 4">
+                    <div class="info">
+                        <h3>Person 4</h3>
+                        <p>Role: Designer</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+        </div><div class="dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+       
+        
+
+    <script>
+        const sliderContainer = document.querySelector('.slider-container');
+const slides = Array.from(document.querySelectorAll('.slide'));
+const dotsContainer = document.querySelector('.dots');
+let currentIndex = 1; // Start with the first real slide
+let autoSlideInterval;
+
+// Clone first and last slides
+const firstClone = slides[0].cloneNode(true);
+const lastClone = slides[slides.length - 1].cloneNode(true);
+
+sliderContainer.appendChild(firstClone); // Add the first slide clone to the end
+sliderContainer.prepend(lastClone); // Add the last slide clone to the start
+
+const updatedSlides = Array.from(document.querySelectorAll('.slide')); // Update slides array
+sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`; // Set initial position
+
+// Create dots
+dotsContainer.innerHTML = slides
+    .map((_, i) => `<span class="dot ${i === 0 ? 'active' : ''}" data-index="${i + 1}"></span>`)
+    .join('');
+const dots = Array.from(document.querySelectorAll('.dot'));
+
+// Show slide instantly
+function showSlide(index, instant = false) {
+    if (instant) {
+        sliderContainer.style.transition = "none"; // Disable smooth transition
+    } else {
+        sliderContainer.style.transition = "transform 0.8s ease-in-out"; // Enable smooth transition
+    }
+    sliderContainer.style.transform = `translateX(-${index * 100}%)`;
+
+    currentIndex = index;
+
+    // Update dots
+    const normalizedIndex = (currentIndex - 1 + slides.length) % slides.length;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[normalizedIndex].classList.add('active');
+}
+
+// Move to the next slide
+function moveToNextSlide() {
+    if (currentIndex >= updatedSlides.length - 1) {
+        showSlide(updatedSlides.length - 1); // Smoothly transition to the cloned first slide
+        setTimeout(() => {
+            showSlide(1, true); // Instantly jump to the real first slide
+        }, 800); // Match transition duration
+    } else {
+        showSlide(currentIndex + 1);
+    }
+}
+
+// Move to the previous slide
+function moveToPrevSlide() {
+    if (currentIndex <= 0) {
+        showSlide(0); // Smoothly transition to the cloned last slide
+        setTimeout(() => {
+            showSlide(updatedSlides.length - 2, true); // Instantly jump to the real last slide
+        }, 800); // Match transition duration
+    } else {
+        showSlide(currentIndex - 1);
+    }
+}
+
+// Add event listeners to dots
+dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+        stopAutoSlide(); // Pause auto-slide
+        const index = parseInt(dot.dataset.index, 10);
+        showSlide(index, true); // Instantly jump to the clicked slide
+        startAutoSlide(); // Resume auto-slide after interaction
+    });
+});
+
+// Auto-slide function
+function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+        moveToNextSlide();
+    }, 4000); // Set auto-slide interval to 4 seconds
+}
+
+// Stop auto-slide function
+function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+}
+
+// Pause auto-slide on hover
+document.querySelector('.testimonial-slider').addEventListener('mouseenter', stopAutoSlide);
+
+// Resume auto-slide on hover leave
+document.querySelector('.testimonial-slider').addEventListener('mouseleave', startAutoSlide);
+
+// Initialize slider
+startAutoSlide();
+
+    </script>
+
+     <!-- Why Choose Us Section -->
+     <div class="why-container" id="whyChooseUs">
+        <img src="constructionSafety.jpg" alt="Construction Safety">
+        <div class="why-content">
+            <h1>Why Choose Us</h1>
+            <div class="why-card">
+                <div class="why-icon">🚧</div>
+                <div class="why-text">
+                    <h3>Siguri e Përmirësuar për Punëtorët</h3>
+                    <p>Zvogëlimi i rrezikut të aksidenteve dhe lëndimeve duke promovuar respektimin e rregullave për përdorimin e PPE.</p>
+                </div>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">🦺</div>
+                <div class="why-text">
+                    <h3>Pajtueshmëri më e Lartë në Kantier</h3>
+                    <p>Sigurimi i respektimit të rregulloreve të sigurisë dhe minimizimi i gjobave të mundshme.</p>
+                </div>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">📈</div>
+                <div class="why-text">
+                    <h3>Produktivitet i Rritur</h3>
+                    <p>Reduktimi i kohës së humbur për shkak të aksidenteve dhe krijimi i një mjedisi më të sigurt për punëtorët.</p>
+                </div>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">⚖️</div>
+                <div class="why-text">
+                    <h3>Përgjegjësi e Reduktuar</h3>
+                    <p>Mbrojtja e kompanive nga pasojat e mundshme ligjore dhe financiare për shkak të shkeljeve të sigurisë.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+         <script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const whySection = document.querySelector('.why-container');
+    const cards = document.querySelectorAll('.why-card');
+
+    const whyObserverOptions = {
+        root: null, // Observes changes relative to the viewport
+        threshold: 0.1 // Trigger when 10% of the section is visible
+    };
+
+    const whyObserverCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                whySection.classList.add('visible');
+                cards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.classList.add('visible');
+                    }, index * 300); // Animate each card with a delay
+                });
+            } else {
+                whySection.classList.remove('visible');
+                cards.forEach(card => {
+                    card.classList.remove('visible');
+                });
+            }
+        });
+    };
+
+    const whyObserver = new IntersectionObserver(whyObserverCallback, whyObserverOptions);
+    whyObserver.observe(whySection);
+});
+
+</script>
+
+<section id="contact-section">
+    <div class="contact-content">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Email: <span>constructguard@gmail.com</span></p>
+            <p>Phone: <span>+355 69 277 8586</span></p>
+            <p>Address: <span>Tiranë</span></p>
+        </div>
+        <div class="contact-form">
+            <h2>Send a Message</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        placeholder=" " 
+                        pattern="[A-Za-z\s]+" 
+                        title="Please enter only letters and spaces" 
+                        required
+                    >
+                    <label for="name">Full Name</label>
+                </div>
+                <div class="form-group">
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder=" " 
+                        required
+                    >
+                    <label for="email">Your Email</label>
+                </div>
+                <div class="form-group">
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        placeholder=" " 
+                        required
+                    ></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+    const nameField = document.getElementById("name");
+    const nameValue = nameField.value;
+
+    // Kontrolloni që emri përmban vetëm shkronja dhe hapësira
+    const nameRegex = /^[A-Za-z\s]+$/;
+
+    if (!nameRegex.test(nameValue)) {
+        e.preventDefault(); // Ndalo dërgimin e formës
+        alert("Full Name should contain only letters and spaces.");
+        nameField.focus();
+    }
+});
+
+</script>
+<footer>
+    <div class="social-links">
+        <a href="#"><img src="facebook.png" alt="Facebook"> Facebook</a>
+        <a href="https://x.com/Constructi86215" target="_blank"><img src="Twiter.jpg" alt="Twitter">Twitter</a>
+                    <a href="https://www.instagram.com/constructguard/" target="_blank"><img src="instagram.png" alt="Instagram">Instagram</a>
+    </div>
+    <p>&copy; 2045 Construction Safety. All rights reserved.</p>
+</footer>
+</body>
+</html>
+

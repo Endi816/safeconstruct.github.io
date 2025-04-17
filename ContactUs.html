@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contactUsStyle.css">
+
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <span>&#128222; Call: <a href="tel:+355692778586">+355 69 277 8586</a></span>
+        <span>&#9993; Email: <a href="mailto: constructguard@gmail.com">constructguard@gmail.com</a></span>
+        <span>&#x1F4CD; Tirane</span>
+    </div>
+
+    <!-- Main Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="Main.html">
+                <img src="Logo.png" alt="ConstructGuard Logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="Main.html">Home</a>
+            <a href="Services.html">Services</a>
+            <a href="AboutUs.html">About</a>
+            <a href="Main.html#testimonial">Testimonial</a>
+            <a href="ContactUs.html">Contact Us</a>
+        </div>
+    </div>
+
+    <div class="contact-container">
+        <img src="group.jpg" alt="Group Photo"> <!-- Replace with your group photo -->
+        <form class="contact-form" id="contactForm">
+            <h2>Contact Us</h2>
+            <div class="form-group">
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder=" " 
+                    pattern="[A-Za-z\s]+" 
+                    title="Please enter only letters and spaces" 
+                    required
+                >
+                <label for="name">Your Name</label>
+            </div>
+            <div class="form-group">
+                <input 
+                    type="text" 
+                    id="surname" 
+                    name="surname" 
+                    placeholder=" " 
+                    pattern="[A-Za-z\s]+" 
+                    title="Please enter only letters and spaces" 
+                    required
+                >
+                <label for="surname">Your Surname</label>
+            </div>
+            <div class="form-group">
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder=" " 
+                    required
+                >
+                <label for="email">Your Email</label>
+            </div>
+            <div class="form-group">
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    placeholder=" " 
+                    required
+                ></textarea>
+                <label for="message">Message</label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+    const nameField = document.getElementById("name");
+    const surnameField = document.getElementById("surname");
+    const nameValue = nameField.value;
+    const surnameValue = surnameField.value;
+
+    // Kontrolloni që fushat përmbajnë vetëm shkronja dhe hapësira
+    const regex = /^[A-Za-z\s]+$/;
+
+    if (!regex.test(nameValue)) {
+        e.preventDefault(); // Ndalo dërgimin e formës
+        alert("The Name field should contain only letters and spaces.");
+        nameField.focus();
+        return;
+    }
+
+    if (!regex.test(surnameValue)) {
+        e.preventDefault(); // Ndalo dërgimin e formës
+        alert("The Surname field should contain only letters and spaces.");
+        surnameField.focus();
+    }
+});
+
+    </script>
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                    <a href="https://x.com/Constructi86215" target="_blank"><img src="Twiter.jpg" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/constructguard/" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="contact-info">
+           
+                <p><span>Email: <a href="mailto: constructguard@gmail.com">constructguard@gmail.com</a></span></p>
+                <p><span>Call: <a href="tel:+01123455678990">+355 69 277 8586</a></span></p>
+                <p><span>Address:</span> Tirane</p>
+            </div>
+        </div>
+        <p class="footer-note">&copy; 2045 Construction Safety. All rights reserved.</p>
+    </footer>
+    
+    
+</body>
+</html>
